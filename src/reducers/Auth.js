@@ -1,5 +1,6 @@
 const defaultUserInfo = {
-  name: 'Demo User',
+  name: 'Testing 123',
+  role: 'Siswa',
   image: 'http://demos.creative-tim.com/light-bootstrap-dashboard-pro/assets/img/default-avatar.png'
 };
 
