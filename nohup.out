@@ -1,0 +1,7 @@
+
+> crystal-dashboard@0.1.0 start /home/chillrend/WebstormProject/NakulaWeb
+> cross-env NODE_PATH=./src node scripts/start.js
+
+The `setup` option is deprecated and will be removed in v3. Please update your config to use `before`
+Starting the development server...
+

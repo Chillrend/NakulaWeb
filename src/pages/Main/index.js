@@ -21,6 +21,7 @@ import Forms from '../Forms';
 import Charts from '../Charts';
 import Calendar from '../Calendar';
 import Tables from '../Tables';
+import NfcWait from '../NFC';
 
 const Main = ({
   mobileNavVisibility,
@@ -50,6 +51,7 @@ const Main = ({
           <Route path="/maps" component={MapsPage} />
           <Route path="/charts" component={Charts} />
           <Route path="/calendar" component={Calendar} />
+          <Route path="/nfc_wait" component={NfcWait} />
           <Footer />
         </div>
       </div>

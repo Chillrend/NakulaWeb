@@ -1,108 +1,83 @@
 import React from 'react';
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
+import axios from 'axios';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
+import PropTypes from 'prop-types';
+
+var allViews = Object.keys(BigCalendar.views).map(k => BigCalendar.views[k]);
 
 BigCalendar.setLocalizer(
-  BigCalendar.momentLocalizer(moment)
+    BigCalendar.momentLocalizer(moment)
 );
 
-let allViews = Object.keys(BigCalendar.views).map(k => BigCalendar.views[k])
+export default class Calendar extends React.Component {
 
-const events = [
-  {
-    'title': 'All Day Event',
-    'allDay': true,
-    'start': new Date(2017, 3, 0),
-    'end': new Date(2017, 3, 1)
-  },
-  {
-    'title': 'Long Event',
-    'start': new Date(2017, 3, 7),
-    'end': new Date(2017, 3, 10)
-  },
 
-  {
-    'title': 'DTS STARTS',
-    'start': new Date(2016, 2, 13, 0, 0, 0),
-    'end': new Date(2016, 2, 20, 0, 0, 0)
-  },
 
-  {
-    'title': 'DTS ENDS',
-    'start': new Date(2016, 10, 6, 0, 0, 0),
-    'end': new Date(2016, 10, 13, 0, 0, 0)
-  },
+  constructor(props){
+    super(props);
 
-  {
-    'title': 'Some Event',
-    'start': new Date(2017, 3, 9, 0, 0, 0),
-    'end': new Date(2017, 3, 9, 0, 0, 0)
-  },
-  {
-    'title': 'Conference',
-    'start': new Date(2017, 3, 11),
-    'end': new Date(2017, 3, 13),
-    desc: 'Big conference for important people'
-  },
-  {
-    'title': 'Meeting',
-    'start': new Date(2017, 3, 12, 10, 30, 0, 0),
-    'end': new Date(2017, 3, 12, 12, 30, 0, 0),
-    desc: 'Pre-meeting meeting, to prepare for the meeting'
-  },
-  {
-    'title': 'Lunch',
-    'start':new Date(2017, 3, 12, 12, 0, 0, 0),
-    'end': new Date(2017, 3, 12, 13, 0, 0, 0),
-    desc: 'Power lunch'
-  },
-  {
-    'title': 'Meeting',
-    'start':new Date(2017, 3, 12,14, 0, 0, 0),
-    'end': new Date(2017, 3, 12,15, 0, 0, 0)
-  },
-  {
-    'title': 'Happy Hour',
-    'start':new Date(2017, 3, 12, 17, 0, 0, 0),
-    'end': new Date(2017, 3, 12, 17, 30, 0, 0),
-    desc: 'Most important meal of the day'
-  },
-  {
-    'title': 'Dinner',
-    'start':new Date(2017, 3, 12, 20, 0, 0, 0),
-    'end': new Date(2017, 3, 12, 21, 0, 0, 0)
-  },
-  {
-    'title': 'Birthday Party',
-    'start':new Date(2017, 3, 13, 7, 0, 0),
-    'end': new Date(2017, 3, 13, 10, 30, 0)
-  },
-  {
-    'title': 'Late Night Event',
-    'start':new Date(2017, 3, 17, 19, 30, 0),
-    'end': new Date(2017, 3, 18, 2, 0, 0)
-  },
-  {
-    'title': 'Multi-day Event',
-    'start':new Date(2017, 3, 20, 19, 30, 0),
-    'end': new Date(2017, 3, 22, 2, 0, 0)
+    this.state = {
+      data_liburan: [],
+      isLoaded: false
+    };
   }
-]
 
-const Calendar = () => (
-  <div className="content">
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-md-12">
-          <BigCalendar
-            events={events}
-            views={allViews}
-            defaultDate={new Date(2017, 3, 1)} />
+  componentDidMount() {
+    let year = new Date().getFullYear();
+
+    axios.get('https://holidayapi.pl/v1/holidays?country=id&year=' + year)
+        .then(response => {
+          this.handleResponse(response)
+        })
+  }
+
+  handleResponse(res){
+    let _self = this;
+    let array = res.data.holidays;
+    let real_array = [];
+    Object.keys(array).map(function(key,index) {
+      let push_array = [];
+      let git_array = array[key];
+      push_array['title'] = git_array[0].name;
+      push_array['allDay'] = true;
+
+      let moment_date = moment(git_array[0].date);
+      let date = Date.parse(git_array[0].date);
+
+      push_array['start'] = date;
+      push_array['end'] = date;
+      push_array['desc'] = git_array[0].name;
+
+      real_array.push(push_array)
+    });
+
+    var data_liburan = _self.state.data_liburan.concat(real_array);
+    _self.setState({data_liburan});
+  }
+
+  render() {
+    const {isLoaded, data_liburan} = this.state;
+    return (
+        <div className="content">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-md-12">
+                {console.log(data_liburan)}
+                <BigCalendar
+                    events={data_liburan}
+                    views={allViews}
+                    defaultDate={new Date()} />
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-);
+    );
+  }
+}
 
-export default Calendar;
+
+Calendar.propTypes = {
+  data_liburan: PropTypes.array
+};

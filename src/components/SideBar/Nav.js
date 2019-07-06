@@ -123,7 +123,7 @@ class Nav extends Component {
         <li className={this.isPathActive('/calendar') ? 'active' : null}>
           <Link to="/calendar">
             <i className="pe-7s-date"></i>
-            <p>Calendar</p>
+            <p>Kalender Pendidikan</p>
           </Link>
         </li>
       </ul>
