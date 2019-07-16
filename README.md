@@ -5,4 +5,4 @@ Requires Node.js and npm
 
 type npm install to download and install dependency
 
-type npm run to launch this project locally
+type npm start to launch this project locally

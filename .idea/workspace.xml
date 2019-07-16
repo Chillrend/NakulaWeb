@@ -5,27 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="333f1be6-c87b-4e1f-9305-f8b565b54e72" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/anim_json/images/img_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/anim_json/images/img_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/anim_json/images/img_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/anim_json/nfc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Dashboard/dashboard_info.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Dashboard/quick_links.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Dashboard/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/NFC/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/base/_card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/base/_card.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SideBar/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideBar/Nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Calendar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Calendar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard/EmailChart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard/SalesChart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard/UserBehaviorChart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -54,7 +35,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/Dashboard/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
+            <state relative-caret-position="1470">
               <caret line="98" column="27" selection-start-line="98" selection-start-column="27" selection-end-line="98" selection-end-column="27" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -67,8 +48,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="75">
-                <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+              <first_editor relative-caret-position="105">
+                <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
               </first_editor>
               <second_editor />
             </state>
@@ -78,7 +59,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/Calendar/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="705">
               <caret line="52" selection-start-line="52" selection-end-line="52" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -119,13 +100,13 @@
         <option value="$PROJECT_DIR$/src/pages/Dashboard/table.js" />
         <option value="$PROJECT_DIR$/src/pages/Dashboard/quick_links.js" />
         <option value="$PROJECT_DIR$/src/assets/anim_json/scan sensor.json" />
-        <option value="$PROJECT_DIR$/src/pages/Dashboard/index.js" />
         <option value="$PROJECT_DIR$/src/pages/Main/index.js" />
         <option value="$PROJECT_DIR$/src/assets/anim_json/nfc.json" />
         <option value="$PROJECT_DIR$/src/assets/anim_json/nfc.js" />
         <option value="$PROJECT_DIR$/src/pages/NFC/index.js" />
         <option value="$PROJECT_DIR$/src/components/SideBar/Nav.js" />
         <option value="$PROJECT_DIR$/src/pages/Calendar/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/Dashboard/index.js" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -142,7 +123,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -191,6 +171,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -262,12 +243,13 @@
       <workItem from="1559394099264" duration="598000" />
       <workItem from="1559482352209" duration="122000" />
       <workItem from="1560394448385" duration="1114000" />
-      <workItem from="1562412629547" duration="442000" />
+      <workItem from="1562412629547" duration="596000" />
+      <workItem from="1563273005707" duration="393000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73097000" />
+    <option name="totallyTimeSpent" value="73644000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -282,7 +264,7 @@
     <frame x="0" y="25" width="1366" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24944155" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24944155" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" weight="0.3298585" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -296,7 +278,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5026061" side_tool="true" weight="0.3257329" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4973939" visible="true" weight="0.3257329" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4973939" visible="true" weight="0.3257329" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -660,7 +642,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Calendar/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="705">
           <caret line="52" selection-start-line="52" selection-end-line="52" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -670,7 +652,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Dashboard/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
+        <state relative-caret-position="1470">
           <caret line="98" column="27" selection-start-line="98" selection-start-column="27" selection-end-line="98" selection-end-column="27" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -681,8 +663,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="75">
-            <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+          <first_editor relative-caret-position="105">
+            <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
           </first_editor>
           <second_editor />
         </state>
